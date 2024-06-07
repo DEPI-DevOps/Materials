@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    volumes: [ "data-vol:/app/data/" ]
+    command: 'server.py'
+  
+  client:
+    build: .
+    command: 'client.py'
+    depends_on: [ server ]
+
+volumes:
+  data-vol:

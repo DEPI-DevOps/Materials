@@ -1,0 +1,4 @@
+venv/
+schema_pb2*.py
+__pycache__/
+db.sqlite
