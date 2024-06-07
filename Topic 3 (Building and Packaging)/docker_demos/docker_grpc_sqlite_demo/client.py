@@ -4,6 +4,9 @@ import schema_pb2 as service
 import schema_pb2_grpc as stub
 
 
+SERVER_ADDR = 'server'
+
+
 def put_user(user_id, user_name):
     args = service.User(user_id=user_id, user_name=user_name)
     response = stub.PutUser(args)
@@ -26,7 +29,7 @@ def delete_user(user_id):
 
 
 if __name__ == '__main__':
-    with grpc.insecure_channel('server:1234') as channel:
+    with grpc.insecure_channel(f'{SERVER_ADDR}:1234') as channel:
         stub = stub.DatabaseStub(channel)
 
         # Create four users

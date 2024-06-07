@@ -85,7 +85,7 @@ docker run hello-world
 
 ```bash
 cd /tmp
-RELEASE=$(curl -s https://api.github.com/repos/hadolint/hadolint/releases/latest | jq -r '.tag_name')
+export RELEASE=$(curl -s https://api.github.com/repos/hadolint/hadolint/releases/latest | jq -r '.tag_name')
 wget "https://github.com/hadolint/hadolint/releases/download/$RELEASE/hadolint-Linux-x86_64"
 sudo mv hadolint* /usr/local/bin/hadolint
 sudo chmod +x /usr/local/bin/hadolint
@@ -96,8 +96,8 @@ hadolint /path/to/Dockerfile
 
 ### Demo
 
-- Follow along with `docker_postgres_demo` to get familiar with docker commands while running a postgres database server.
-- Create dockerfiles for sample apps in C++, Java, nodejs, Python, Go.
+- Follow along with `docker_demos` to get familiar with docker commands while using it with popular technologies.
+- Create dockerfiles for sample `apps` in C++, Java, nodejs, Python, and Go.
 
 ### Using docker-compose
 

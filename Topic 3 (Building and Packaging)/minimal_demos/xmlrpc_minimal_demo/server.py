@@ -13,7 +13,7 @@ class RemoteFunctions():
 
 
 if __name__ == '__main__':
-    with SimpleXMLRPCServer(('0.0.0.0', 1234), logRequests=False) as server:
+    with SimpleXMLRPCServer(('0.0.0.0', 1234), logRequests=True) as server:
         server.register_introspection_functions()
         server.register_instance(RemoteFunctions())
         try:

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  my-app:
+    image: alpine
+    command: ["sh", "-c", "cat /var/run/secrets/DB_PASSWORD"]
+    secrets:
+      - source: db-password
+        target: DB_PASSWORD
+
+secrets:
+  db-password:
+    file: .env
