@@ -71,24 +71,24 @@ Total 25 Sessions
 ------------------------ Offline 1
 03 (10/5). More on Linux and Networking
 04 (17/5). Development, Testing, and QA (Python, Nodejs, Go, JetBrains, and more on Git)
+05 (21/6). Building and Publishing Artifacts
 ------------------------ Offline 2
-05 (21/6). Building and Publishing Artifacts (maven, npm/webpack, pip, make, dep)
 06 (28/6). Docker 1 (images, containers, registeries). Practice with DBs
+07 (05/7). Docker 2 (volumes, networks, compose). Practice with Message Queues & RPC
 ------------------------ Offline 3
-07 (05/7). Docker 2 (volumes, networks, compose). Practice with Message Queues
 08 (12/7). CI (Jenkins and GitHub Actions)
------------------------- Offline 4
 09 (19/7). CD (Ansible)
+------------------------ Offline 4
 10 (26/7). IaC (Terraform)
------------------------- Offline 5
 11 (02/8). K8s essentials, Minikube
+------------------------ Offline 5
 12 (09/8). EKS, Helm, and Helmfile
------------------------- Offline 6
 13 (16/8). Monitoring (Prometheus and Loki)
+------------------------ Offline 6
 14 (30/8). Visualization and Alerting (Grafana)
 ------------------------ Offline 7
-15 (06/9). Interview Process, Resume spamming, and Preparations (Problem Solving)
-16 (13/9). Recap, Wrap-Up, QA
+15 (06/9). DevSecOps
+16 (13/9). Interview Preparation, Recap, QA
 ----------------------- Offline 8
 17 (20/9). Final interviews
 ```
@@ -123,7 +123,7 @@ Total 25 Sessions
 05 (24/5). Building and Publishing Artifacts (maven, npm/webpack, pip, make, dep)
 06 (31/5). Docker 1 (images, containers, registeries). Practice with DBs
 ------------------------ Offline 3
-07 (07/6). Docker 2 (volumes, networks, compose). Practice with Message Queues
+07 (07/6). Docker 2 (volumes, networks, compose). Practice with Message Queues & RPC
 08 (14/6). CI (Jenkins and GitHub Actions)
 ------------------------ Offline 4
 09 (21/6). CD (Ansible)
@@ -135,10 +135,9 @@ Total 25 Sessions
 13 (19/7). Monitoring (Prometheus and Loki)
 14 (26/7). Visualization and Alerting (Grafana)
 ------------------------ Offline 7
-15 (02/8). Interview Process, Resume spamming, and Preparations (Problem Solving)
-16 (09/8). Recap, Wrap-Up, QA
+15 (02/8). DevSecOps
+16 (09/8). Interview Preparation, Recap, QA
 ----------------------- Offline 8
 17 (16/8). Final interviews
-
 ```
 

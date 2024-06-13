@@ -4,7 +4,7 @@
 
 A DevOps engineer needs to be involved in the development process. While your tasks may not involve writing application logic, they will mostly revolve around the product(s) being developed/deployed.
 
-This lab focuses on three essential skills for a DevOps engineer: Automation, Web Development, Testing, and Version Control.
+This lab focuses on four essential skills for a DevOps engineer: Automation, Web Development, Testing, and Version Control.
 
 [TOC]
 
@@ -154,7 +154,7 @@ Your options are:
   - golangci-lint for Go
 - **Git hooks** may be in place to help the developer do certain actions (e.g., run linter/tester/check commit message) before committing their code.
   - Popular examples include Husky and Pre-commit.
-- For web applications. a **UI testing framework** can be used to run different types of pre-configured or random (monkey) testing for the UI.
+- For web applications, a **UI testing framework** can be used to run different types of pre-configured or random (monkey) testing for the UI.
   - Examples include Selenium and Playwright
 - DevSecOps involves implementing different **security-related measures** in all stages of the SDLC.
   - **Static Application Security Testing (SAST):** static code analysis that focuses on security issues and bad coding practices
@@ -237,7 +237,7 @@ git push -u origin main
    >
    > A unit test may validate the correctness of a certain function/procedure and report any logical errors
 
-3. Push your code to GitHub. Make sure the repository is public and submit the link [here](https://docs.google.com/spreadsheets/d/1_xe6mEWpQJ8QwOQn1kSGxvwEm-8PnCLW-hENa5NkWl4/edit#gid=0) (use EUI email to have edit access)
+3. Push your code to GitHub. Make sure the repository is public and submit the link [here](https://docs.google.com/spreadsheets/d/1_xe6mEWpQJ8QwOQn1kSGxvwEm-8PnCLW-hENa5NkWl4/edit#gid=0)
 
    - Try to use branches for feature development / bug fixes.
    - And/or, complete the interactive tutorials at https://learngitbranching.js.org/
