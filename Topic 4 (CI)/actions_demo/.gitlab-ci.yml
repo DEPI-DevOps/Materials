@@ -1,0 +1,17 @@
+stages:
+  - test  # Define a stage for the test job
+
+# Define a job named 'test'
+test:
+  stage: test  # Assign the job to the 'test' stage
+  image: python:3.12  # Use a pre-built Docker image with Python 3.12
+
+  # Define the script to run within the job container
+  script:
+    - pip install -r requirements.txt
+    - pytest
+
+  # Cache the pip cache to improve performance across builds
+  cache:
+    paths:
+      - ~/.cache/pip

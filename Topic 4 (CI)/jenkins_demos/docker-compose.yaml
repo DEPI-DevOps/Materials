@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080"   # Web UI
+      - "50000:50000" # Agents communication with controller
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock # Bind-mounting docker socket if needed
+
+volumes:
+  jenkins_home:
+    name: jenkins_home

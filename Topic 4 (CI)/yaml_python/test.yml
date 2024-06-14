@@ -1,0 +1,29 @@
+object:
+  key1: string-value
+  key2: 1234
+  key3: 1.2
+  key4: true
+
+list-1:
+- item1
+- item2
+
+list-2:
+  - member_key_1: "Hello world!\n"
+  - member_key_2: off
+
+list-3: [ 1, 'test', 1.1, no ]
+
+list-4:
+  - member_obj:
+      key: value
+
+lengthy_string: >
+  The final string will have the endline character
+  replaced with a single space.
+  Check https://yaml-multiline.info for more info
+
+config.ini: |
+  [Config]
+  Important: yes
+  Description=Preserves line separations
