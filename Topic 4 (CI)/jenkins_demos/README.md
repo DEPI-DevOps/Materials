@@ -2,7 +2,7 @@
 
 - Jenkins native Installation
 
-    > Docks: https://www.jenkins.io/doc/book/installing/linux
+    > Docs: https://www.jenkins.io/doc/book/installing/linux
 
     ```bash
     # Installing jenkins and dependencies
