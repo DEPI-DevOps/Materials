@@ -1,0 +1,15 @@
+---
+- name: install nginx
+  apt:
+    name:
+      - nginx
+    update_cache: true
+
+- name: copy nginx config to guest
+  ansible.builtin.copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+    mode: '0644'
+
+  notify:
+    - Restart nginx

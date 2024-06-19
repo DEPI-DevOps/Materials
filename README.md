@@ -1,22 +1,6 @@
 # DevOps Track - DEPI 2024
 
-![The DevOps lifecycle: A quick and easy walkthrough | Nulab](https://cacoo.com/wp-app/uploads/2021/06/continuous-development-visual.png)
-
-## Thoughts before starting
-
-- No need to reinvent the wheel. High-quality educational content is free and available online.
-  - Tutorial hell: Too much content, too little time? Focus on the fundamentals, one topic at a time.
-  - Know when to stop listening and start implementing.
-- I'm only here to recommend resources and provide guidance to your overall learning process.
-  - Life is too short to debug individual complicated bugs.
-
-- Online Materials: choose what suits your needs based on your level and preference.
-  - Fast-paced content vs. Step-by-step long guides
-  - Reading materials (blogs, articles, textbooks) vs. video tutorials
-  - Experimenting with a project and referring to docs or asking AI when needed
-- You cannot learn everything right away, puzzle pieces come together with time.
-- Practice is as important as listening to lectures. Both are equally needed.
-- **Commitment** is the key
+![](https://i.imgur.com/MYzltxl.png)
 
 ## Resources
 
@@ -29,23 +13,11 @@
   - https://www.youtube.com/@christianlempa
   - https://www.youtube.com/@AntonPutra
   - https://www.youtube.com/@NetworkChuck
+  - https://www.youtube.com/@DevOpsDirective
+  - https://www.youtube.com/channel/UCfz8x0lVzJpb_dgWm9kPVrw
 - Recommended prerequisites:
   - https://www.coursera.org/professional-certificates/google-it-support
   - https://www.coursera.org/professional-certificates/google-it-automation
-- SDLC Project-Based approach
-  - **Plan:** Documenting your work (MarkDown), project management tools (Trello/JIRA).
-  - **Code:** Programming languages (Python/Go), Version Control (Git)
-  - **Build:** Building and Publishing Artifacts (Docker)
-  - **Test:** Testing Frameworks, Functional/Non-functional testing, Quality Control
-  - **Release:** CI/CD (GitHub Actions, Jenkins)
-  - **Deploy:** Infrastructure as Code (Terraform), Configuration Management (Ansible).
-  - **Operate:** Container Orchestration (Kubernetes) and Cloud providers (AWS/GCP/Azure)
-  - **Monitor:** Logging, visualization, analytics (Prometheus, Loki, Grafana)
-
-## Lab Organization
-
-- **Offline sessions**: practical part
-- **Online sessions:** theoretical part
 
 ## Plan (C1) - tentative
 
@@ -70,7 +42,7 @@ Total 25 Sessions
 02 (26/4). Networking
 ------------------------ Offline 1
 03 (10/5). More on Linux and Networking
-04 (17/5). Development, Testing, and QA (Python, Nodejs, Go, JetBrains, and more on Git)
+04 (17/5). Development, Testing, and QA
 05 (21/6). Building and Publishing Artifacts
 ------------------------ Offline 2
 06 (28/6). Docker 1 (images, containers, registeries). Practice with DBs
@@ -118,9 +90,9 @@ Total 25 Sessions
 02 (26/4). Networking
 ------------------------ Offline 1
 03 (10/5). Development (Python, Vscode, Git)
-04 (17/5). Testing and QA + Practice (Python, Nodejs, Go, JetBrains, and more on Git)
+04 (17/5). Testing and QA + Practice
 ------------------------ Offline 2
-05 (24/5). Building and Publishing Artifacts (maven, npm/webpack, pip, make, dep)
+05 (24/5). Building and Publishing Artifacts
 06 (31/5). Docker 1 (images, containers, registeries). Practice with DBs
 ------------------------ Offline 3
 07 (07/6). Docker 2 (volumes, networks, compose). Practice with Message Queues & RPC
