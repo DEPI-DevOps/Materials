@@ -17,5 +17,5 @@ func main() {
 }
 
 func hello(c echo.Context) error {
-	return c.File("static/index.html")
+	return c.File("public/index.html")
 }

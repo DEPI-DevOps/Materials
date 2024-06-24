@@ -60,7 +60,7 @@ The Hyper-Text Transfer Protocol (HTTP) is an application layer protocol used fo
 
 ![](https://i.imgur.com/4mOASJL.png)
 
-**Common HTTP commands and response codes: **
+**Common HTTP commands and response codes:**
 
 ![](https://i.imgur.com/37iwvTs.png)
 
@@ -111,35 +111,35 @@ DNS: a global naming system for computers, services, and other internet resource
   - **DNS client = resolver:** client side of the DNS, responsible for initiating and sequencing the appropriate queries to the name server, leading to the full hostname to IP translation.
     - DNS daemon at client communicates with DNS server through port 53, it uses udp for requests and tcp for zone transfer.
 
-- **Questions:**
+**Questions:**
 - **What DNS servers to use?**
-    - Each host joining a network is provided (statically or through DHCP) with the IP address of a primary and secondary DNS server (if the primary fails).
+  - Each host joining a network is provided (statically or through DHCP) with the IP address of a primary and secondary DNS server (if the primary fails).
   - Prioritized list of DNS nameservers to use is stored at `/etc/resolv.conf`
-    
-  - **How to use the DNS servers?**
+
+- **How to use the DNS servers?**
   - The application requesting DNS will communicate with the recursive DNS resolver (through a stub resolver) which will query the DNS server and returns results.
   - **DNS tools**
-      - `host`, `dig` ,`nslookup` are used for performing DNS lookups (hostnames to IP addresses)
-      - `dig` is preferred for debugging (it has more options and output is a raw record), while `host` and `nslookup` are more user-friendly. 
-      - Examples: `host example.com 8.8.8.8`. `dig @8.8.8.8 example.com in A`, `nslookup example.com`
+    - `host`, `dig` ,`nslookup` are used for performing DNS lookups (hostnames to IP addresses)
+    - `dig` is preferred for debugging (it has more options and output is a raw record), while `host` and `nslookup` are more user-friendly.
+    - Examples: `host example.com 8.8.8.8`. `dig @8.8.8.8 example.com in A`, `nslookup example.com`
     - `/etc/resolv.conf`
       - Nameservers under the file can be modified directly, although not recommended.
       - A `search <suffix>` entry can be added to the `resolv.conf`; Then, if the DNS can't resolve some request like `ping <host>`, it will try `ping <host><suffix>`
       - This is helpful if the LAN environment has it's own DNS server (e.g., querying `university` will automatically resolve to `university.innopolis.ru` if there is an entry `search innopolis.ru` in `resolv.conf`)
       - For changes to take effect, the DNS server should be restarted (e.g., `sudo service bind9 restart`)
   
-  - **When to use DNS servers?**
+- **When to use DNS servers?**
   - For translation between hostnames and IP address, host/mail server aliasing, or load distribution.
   - [`/etc/nsswitch.conf`](https://en.wikipedia.org/wiki/Name_Service_Switch)
-      - A file used by C and other applications to decide where to get **name-service information** (from which database/file, or whether to query DNS/NIS/LDAP) and in which order.
-        - **Directory/name service** maps names of network resources to their respective network addresses (like a phonebook)
-        - In other words, it tells the system to look for X in [Y] where
-          - **X can be** a specific user/group name/password, hostname, network, protocol, service, etc. 
-          - **Y may include (in any order):** local database, OS files, DNS, LDAP (check below), NIS with rules on what to do if the resource was not found.
-      - **Example:** `hosts: dns [!NOTFOUND=return] files ` will try DNS lookup first to get RRs from hostnames, if not found, it will check files (e.g., `/etc/hosts`) 
+    - A file used by C and other applications to decide where to get **name-service information** (from which database/file, or whether to query DNS/NIS/LDAP) and in which order.
+      - **Directory/name service** maps names of network resources to their respective network addresses (like a phonebook)
+      - In other words, it tells the system to look for X in [Y] where
+        - **X can be** a specific user/group name/password, hostname, network, protocol, service, etc.
+        - **Y may include (in any order):** local database, OS files, DNS, LDAP (check below), NIS with rules on what to do if the resource was not found.
+    - **Example:** `hosts: dns [!NOTFOUND=return] files` will try DNS lookup first to get RRs from hostnames, if not found, it will check files (e.g., `/etc/hosts`)
   
-  - **When to use /etc/hosts?**
-- Hosts file stores (IP, hostname) pairs that <u>override</u> the ones provided by the DNS (unless configured otherwise in `/etc/nsswitch.conf`)
+- **When to use /etc/hosts?**
+  - Hosts file stores (IP, hostname) pairs that <u>override</u> the ones provided by the DNS (unless configured otherwise in `/etc/nsswitch.conf`)
 
 ### SSL/TLS (Secure Sockets Layer/Transport Layer Security)
 
@@ -163,7 +163,7 @@ Protocols that provide secure communications over a computer network. They encry
 
   - Key cannot be just sent through the network, since again it can be eavesdropped and used by intruders.
 
-- **Solution #2: **use [asymmetric key algorithm](https://en.wikipedia.org/wiki/Public-key_cryptography) to share the symmetric key securely.
+- **Solution #2:** use [asymmetric key algorithm](https://en.wikipedia.org/wiki/Public-key_cryptography) to share the symmetric key securely.
 
   - Think of the algorithm as two functions, everyone knows their implementation details.
 
@@ -176,11 +176,11 @@ Protocols that provide secure communications over a computer network. They encry
       - `encrypt(plaintext, privateKey) = ciphertext`
       - `decrypt(ciphertext, publicKey) = plaintext`
     - The convention is that, public key can be shared with everyone (send on the network), while private key (identity) should not be shared with anyone at all.
-    
+
   - **How it works:**
     1. Server has generated a pair of keys `publicKey`, `privateKey`
     2. Server sends `publicKey` to whoever wants to communicate with it (i.e., client)
-    
+
     3. Client generates a symmetric key `k`
     4. Client sends `encrypt(k, publicKey)` to the server
     5. Only server can do `k = decrypt(k, privateKey)`
@@ -212,7 +212,7 @@ Protocols that provide secure communications over a computer network. They encry
 
   - For a CA to be trusted, it should sign (encrypt) its public key using the private key of another higher-authority CA.
 
-  - A client OS or web browser trusts only a certain number of hard-coded root CAs. 
+  - A client OS or web browser trusts only a certain number of hard-coded root CAs.
 
     > As of 24 August 2020, 147 root certificates, representing 52 organizations, are trusted in the Mozilla Firefox web browser, 168 root certificates, representing 60 organizations, are trusted by macOS, and 255 root certificates, representing 101 organizations, are trusted by Microsoft Windows.
 
@@ -227,7 +227,6 @@ Protocols that provide secure communications over a computer network. They encry
   - A nonprofit Certificate Authority providing TLS certificates to 260 million websites.
   - The objective is to make it possible to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. This is accomplished by running a certificate management agent on the web server.
   - First, the agent proves to the CA that the web server controls a domain. Then, the agent can request, renew, and revoke certificates for that domain.
-
 
 ### SSH (Secure Shell)
 

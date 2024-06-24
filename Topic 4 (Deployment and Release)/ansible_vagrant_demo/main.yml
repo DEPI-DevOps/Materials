@@ -1,0 +1,17 @@
+---
+- name: Install docker and docker Python SDK on all app nodes
+  hosts: app
+  become: true
+  roles:
+    - docker
+
+- name: Deploy an app from Docker Hub on the VM
+  hosts: app
+  tasks:
+    - name: Deploy the app container
+      docker_container:
+        name: app
+        image: sh3b0/app_python
+        state: started
+        ports:
+          - "80:8080"

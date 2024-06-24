@@ -1,0 +1,21 @@
+Vagrant.require_version ">= 1.5"
+
+Vagrant.configure("2") do |config|
+    config.vm.define :app do |app|
+        app.vm.provider :virtualbox do |v|
+            v.name = "app"
+            v.customize [
+                "modifyvm", :id,
+                "--name", "app",
+                "--memory", 512,
+                "--natdnshostresolver1", "on",
+                "--cpus", 1,
+            ]
+        end
+
+        app.vm.box = "debian/bookworm64"
+        app.vm.network :private_network, ip: "192.168.56.10"
+        app.vm.network "forwarded_port", guest: 80, host: 8080
+        app.ssh.forward_agent = true
+    end
+end
