@@ -313,7 +313,7 @@ Check `terraform_demos` directory to see Ansible in action.
 
    - You may need to install docker on the machines, use Ansible for that as well.
 
-   - If you have trouble with AWS, run the playbook against 3 VMs or containers (provisioned with Vagrant or Terraform).
+   - If you have trouble with AWS, run the playbook against 3 VirtualBox VMs (provisioned with Vagrant or Terraform).
 
 
 
