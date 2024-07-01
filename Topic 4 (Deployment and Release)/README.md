@@ -299,20 +299,23 @@ Check `terraform_demos` directory to see Ansible in action.
 ## Tasks
 
 1. Write a GitHub action for your web application (`.github/workflows/action.yml`) that runs when modification to the app logic are pushed to the main branch. The action should run linter/tester on your source code
-   - Once tests pass, the action should build the docker container for the app and push the latest version to docker hub.
+   - Once tests pass, the action should build the docker container for the app and push the latest version to DockerHub.
    - If the commit is tagged, publish a corresponding docker image with the given tag.
+   - Add an [action status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) at the top of your README.
 
-2. Write Ansible playbook that uses [Ansible docker module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html) to run your application as a container (pulled from DockerHub).
+2. **[Extra]** Deploy Jenkins server in an EC2 instance and setup GitHub integration with hooks for your application to run linter/tester whenever new code is pushed to the main branch.
 
-   - Execute the playbook against your `localhost` for testing.
+3. Write Ansible playbook (`site.yml`) that uses [Ansible docker module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html) to run your application as a container (pulled from DockerHub).
 
-   - In the README, include any steps or configuration used to run the playbook.
+   - Execute the playbook against your `localhost` for testing. Include commands used and a screenshot for the successful run.
 
-   - [Bonus] run the playbook against multiple VMs or AWS EC2 instances and include the steps in README.
+4. Run your Ansible playbook against 3 EC2 instances (provisioned using Terraform) and include all steps and screenshots in README.
 
-3. [Extra] Deploy Jenkins server in an EC2 instance and setup GitHub integration with hooks for your application to run linter/tester whenever new code is pushed to the main branch.
+   - You may need to install docker on the machines, use Ansible for that as well.
 
-   
+   - If you have trouble with AWS, run the playbook against 3 VMs or containers (provisioned with Vagrant or Terraform).
+
+
 
 ## Recommended Tutorials
 
