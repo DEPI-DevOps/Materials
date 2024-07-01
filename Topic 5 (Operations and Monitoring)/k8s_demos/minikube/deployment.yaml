@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels: # (optional) arbitrary keys and corresponding values to label the deployment
+    app: app  
+spec:
+  replicas: 3
+  selector: # the selector used by ReplicaSet to find the deployment pods, must match pod template labels
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels: # sets labels for all pods created by this deployment.
+        app: app
+    spec:
+      containers:
+      - name: app
+        env:  # just for testing 
+        - name: TEST_ENV
+          value: "Set by K8s"
+        image: sh3b0/app_nodejs:latest
+        ports:
+        - containerPort: 8080 # port exposed by the app image
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

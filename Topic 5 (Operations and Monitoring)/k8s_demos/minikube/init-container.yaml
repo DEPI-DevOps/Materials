@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  containers:
+  - name: myapp
+    image: alpine:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    command: ["tail", "-f", "/dev/null"] # to keep container running
+    volumeMounts:
+      - name: example-volume
+        mountPath: /tmp/example
+  initContainers:
+    - name: init
+      image: alpine:latest
+      command: ["wget", "http://example.com/", "-P", "/tmp/example"]
+      volumeMounts:
+      - name: example-volume
+        mountPath: /tmp/example
+  volumes:
+    - name: example-volume
+      emptyDir: {}

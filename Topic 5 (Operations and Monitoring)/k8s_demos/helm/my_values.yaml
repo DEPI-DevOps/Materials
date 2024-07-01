@@ -1,0 +1,10 @@
+# Example usecase for the created chart.
+# Here we can override the default values in app-deployment/values.yaml
+
+image: sh3b0/app_python:latest
+
+replicaCount: 3
+
+stateful:
+  enabled: true
+  storageRequest: 5Mi
