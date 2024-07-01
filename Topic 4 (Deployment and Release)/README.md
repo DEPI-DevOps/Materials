@@ -258,11 +258,10 @@ Terraform is an infrastructure as code tool that enables you to safely and predi
 The core Terraform workflow consists of 3 stages:
 
 1. **Write:** represent infrastructure as [HCL declarative code](https://www.terraform.io/language). The syntax is built around two constructs: **arguments** and **blocks** (i.e., line-separated arguments and blocks).
-
    - HCL supports common programming concepts such as **variables**, **types** (string, numeric), **functions** (built-in), and **expressions**.
-
+   
    - An existing and supported infrastructure can be **import**ed into terraform to start managing it from code.
-
+   
 2. **Plan:** terraform creates an execution plan describing actions (e.g., create, modify, or destroy resources) that will be taken based on existing infrastructure **state** (stored in the **backend**) and current **workspace** configuration.
 
 3. **Apply:** interact with the service/platform-specific API through their **providers** (published on [**registry**](https://registry.terraform.io/)) to execute the plan.
@@ -299,11 +298,19 @@ Check `terraform_demos` directory to see Ansible in action.
 
 ## Tasks
 
-1. Write GitHub actions for your Python web application that runs when modification to the app logic (.py files) are pushed to the main branch. The action should run linter/tester on your source code
+1. Write a GitHub action for your web application (`.github/workflows/action.yml`) that runs when modification to the app logic are pushed to the main branch. The action should run linter/tester on your source code
    - Once tests pass, the action should build the docker container for the app and push the latest version to docker hub.
    - If the commit is tagged, publish a corresponding docker image with the given tag.
-   
-2. Deploy Jenkins server in an EC2 instance and setup GitHub integration with hooks for your application.
+
+2. Write Ansible playbook that uses [Ansible docker module](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_container_module.html) to run your application as a container (pulled from DockerHub).
+
+   - Execute the playbook against your `localhost` for testing.
+
+   - In the README, include any steps or configuration used to run the playbook.
+
+   - [Bonus] run the playbook against multiple VMs or AWS EC2 instances and include the steps in README.
+
+3. [Extra] Deploy Jenkins server in an EC2 instance and setup GitHub integration with hooks for your application to run linter/tester whenever new code is pushed to the main branch.
 
    
 
