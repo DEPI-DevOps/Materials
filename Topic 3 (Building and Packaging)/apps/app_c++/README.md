@@ -42,5 +42,5 @@ Matrix Inverse:
 
 ```bash
 docker build -t app_cpp .
-docker run --rm -it app_app
+docker run --rm -it app_cpp
 ```
