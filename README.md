@@ -70,7 +70,7 @@ Total 25 Sessions
 ## Plan (C2) - tentative
 
 ```bash
-Total 25 Sessions
+Total 24 Sessions
 =================
 
 8 Offline Practice
@@ -84,7 +84,7 @@ Total 25 Sessions
 7 (27/7). Monitoring (Prometheus, Loki, and Grafana)
 8 (10/8). Final presentations
 
-17 Online Theory
+16 Online Theory
 =================
 01 (19/4). Linux
 02 (26/4). Networking
