@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "~> 5.0"
     }
   }
 
@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "deleteme" {
-  ami           = "ami-06a908e4019cb5e7d"
+  ami           = "ami-04a81a99f5ec58529" # Ubuntu 24.04 LTS (us-east-1)
   instance_type = "t2.micro"
 
   tags = {
