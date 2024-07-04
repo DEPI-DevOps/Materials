@@ -49,7 +49,7 @@ Total 25 Sessions
 07 (05/7). Docker 2 (volumes, networks, compose). Practice with Message Queues & RPC
 ------------------------ Offline 3
 08 (12/7). CI (Jenkins and GitHub Actions)
-09 (19/7). CD (Ansible)
+09 (19/7). CD (Ansible) & AWS Overview
 ------------------------ Offline 4
 10 (26/7). IaC (Terraform)
 11 (02/8). K8s essentials, Minikube
@@ -98,7 +98,7 @@ Total 24 Sessions
 07 (07/6). Docker 2 (volumes, networks, compose). Practice with Message Queues & RPC
 08 (14/6). CI (Jenkins and GitHub Actions)
 ------------------------ Offline 4
-09 (21/6). CD (Ansible)
+09 (21/6). CD (Ansible) & AWS Overview
 ------------------------ Offline 5
 10 (05/7). IaC (Terraform)
 11 (12/7). K8s essentials, Minikube
