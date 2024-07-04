@@ -272,7 +272,7 @@ The core Terraform workflow consists of 3 stages:
 
 #### Demo
 
-Check `terraform_demos` directory to see Ansible in action.
+Check `terraform_demos` directory to see Terraform in action.
 
 #### Best Practices
 
@@ -292,7 +292,7 @@ Check `terraform_demos` directory to see Ansible in action.
   ├── outputs.tf    # output variables
   ```
 
-- When using providers (for vagrant or terraform), be sure to pin their versions to ensure reproducibility.
+- When using providers, make sure to pin their versions to ensure reproducibility.
 
 
 

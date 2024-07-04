@@ -1,14 +1,12 @@
-# ansible_vagrant_docker_demo
+# ansible_vagrant_demo
 
 ## Installation
 
 > Reference: <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>
 
-TL;DR for the reference article:
-
 - Ansible is a Python package.
 
-- To get the latest stable and maintained version, it's better to have Python installed on the control node.
+- To get the latest stable and maintained version, you should have Python installed on the control node.
 
 - They recommend using `pipx` to have Ansible CLI tools (`ansible`, `ansible-playbook`, etc.) available globally.
 
@@ -43,6 +41,11 @@ TL;DR for the reference article:
 
 2. Run the playbook to connect to the VM, install docker, then pull and run an image from DockerHub.
 
-   ```bash
+   ``` bash
    ansible-playbook main.yml
    ```
+
+   - `main.yml ` contains the main playbook to be executed.
+   - `hosts.ini` contains the inventory (connection parameters to the machines)
+   - `ansible.cfg` contains global configuration for Ansible.
+   - `roles/` contain the `docker` installation role being used by `main.yml`
