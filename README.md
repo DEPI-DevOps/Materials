@@ -54,15 +54,15 @@ Total 25 Sessions
 10 (26/7). IaC (Terraform)
 11 (02/8). K8s essentials, Minikube
 ------------------------ Offline 5
-12 (09/8). EKS, Helm, and Helmfile
-13 (16/8). Monitoring (Prometheus and Loki)
+12 (09/8). More on K8s
+13 (16/8). EKS, Helm, and Helmfile
 ------------------------ Offline 6
-14 (30/8). Visualization and Alerting (Grafana)
+14 (30/8). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
 ------------------------ Offline 7
 15 (06/9). DevSecOps
 16 (13/9). Interview Preparation, Recap, QA
 ----------------------- Offline 8
-17 (20/9). Final interviews
+17 (20/9). Final assessment
 ```
 
 
@@ -99,17 +99,16 @@ Total 25 Sessions
 08 (14/6). CI (Jenkins and GitHub Actions)
 ------------------------ Offline 4
 09 (21/6). CD (Ansible)
-10 (28/6). IaC (Terraform)
 ------------------------ Offline 5
-11 (05/7). K8s essentials, Minikube
-12 (12/7). EKS, Helm, and Helmfile
+10 (05/7). IaC (Terraform)
+11 (12/7). K8s essentials, Minikube
 ------------------------ Offline 6
-13 (19/7). Monitoring (Prometheus and Loki)
-14 (26/7). Visualization and Alerting (Grafana)
+12 (19/7). EKS, Helm, and Helmfile
+13 (26/7). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
 ------------------------ Offline 7
-15 (02/8). DevSecOps
-16 (09/8). Interview Preparation, Recap, QA
+14 (02/8). DevSecOps
+15 (09/8). Interview Preparation, Recap, QA
 ----------------------- Offline 8
-17 (16/8). Final interviews
+16 (16/8). Final assessment
 ```
 
