@@ -141,7 +141,7 @@ hadolint /path/to/Dockerfile
 
   
 
-## Recommended Watch
+## Recommended Tutorials
 
 - Docker Crash Course: https://www.youtube.com/watch?v=3c-iBn73dDE
 - Docker Networking: https://www.youtube.com/watch?v=OU6xOM0SE4o
