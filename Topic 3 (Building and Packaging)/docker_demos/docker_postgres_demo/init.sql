@@ -10,4 +10,3 @@ CREATE TABLE users (
 
 -- Insert some sample data
 INSERT INTO users (username, email) VALUES ('johndoe', 'johndoe@example.com'), ('janedoe', 'janedoe@example.com');
- 

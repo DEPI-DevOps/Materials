@@ -1,23 +1,23 @@
 # DevOps Track - DEPI 2024
 
-![](https://i.imgur.com/MYzltxl.png)
+![DevOps Cycle](https://i.imgur.com/MYzltxl.png)
 
 ## Resources
 
-- Popular roadmap: https://roadmap.sh/devops
+- Popular roadmap: <https://roadmap.sh/devops>
 - Popular channels
-  - https://www.youtube.com/@TechWorldwithNana
-  - https://www.youtube.com/@MarcelDempers
-  - https://www.youtube.com/@hnasr
-  - https://www.youtube.com/@Fireship
-  - https://www.youtube.com/@christianlempa
-  - https://www.youtube.com/@AntonPutra
-  - https://www.youtube.com/@NetworkChuck
-  - https://www.youtube.com/@DevOpsDirective
-  - https://www.youtube.com/channel/UCfz8x0lVzJpb_dgWm9kPVrw
+  - <https://www.youtube.com/@TechWorldwithNana>
+  - <https://www.youtube.com/@MarcelDempers>
+  - <https://www.youtube.com/@hnasr>
+  - <https://www.youtube.com/@Fireship>
+  - <https://www.youtube.com/@christianlempa>
+  - <https://www.youtube.com/@AntonPutra>
+  - <https://www.youtube.com/@NetworkChuck>
+  - <https://www.youtube.com/@DevOpsDirective>
+  - <https://www.youtube.com/channel/UCfz8x0lVzJpb_dgWm9kPVrw>
 - Recommended prerequisites:
-  - https://www.coursera.org/professional-certificates/google-it-support
-  - https://www.coursera.org/professional-certificates/google-it-automation
+  - <https://www.coursera.org/professional-certificates/google-it-support>
+  - <https://www.coursera.org/professional-certificates/google-it-automation>
 
 ## Plan (C1) - tentative
 
@@ -65,8 +65,6 @@ Total 25 Sessions
 17 (20/9). Final assessment
 ```
 
-
-
 ## Plan (C2) - tentative
 
 ```bash
@@ -111,4 +109,3 @@ Total 24 Sessions
 ----------------------- Offline 8
 16 (16/8). Final assessment
 ```
-

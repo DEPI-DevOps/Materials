@@ -19,7 +19,7 @@ spec:
         env:  # just for testing 
         - name: TEST_ENV
           value: "Set by K8s"
-        image: sh3b0/app_nodejs:latest
+        image: sh3b0/app_python:latest
         ports:
         - containerPort: 8080 # port exposed by the app image
         resources:

@@ -33,11 +33,9 @@ An interesting analogy:
 
 > Continuous deployment contrasts with **continuous delivery** (also abbreviated CD), a similar approach in which software functionalities are also frequently delivered and deemed to be potentially capable of being deployed, but are actually not deployed. As such, continuous deployment can be viewed as a more complete form of automation than continuous delivery
 
-**Example CI/CD Pipeline**
+#### Example CI/CD Pipeline
 
 ![CI/CD for AKS apps with GitHub Actions and GitFlow - Azure Example  Scenarios | Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/guide/aks/media/ci-cd-gitops-github-actions-aks-pull.png)
-
-
 
 ### XaaS (Anything as a Service)
 
@@ -82,7 +80,7 @@ Example config written in XML, JSON, and YAML
 
 #### Sample YAML config
 
-> Official Spec: https://yaml.org/spec/1.2.2/
+> Official Spec: <https://yaml.org/spec/1.2.2/>
 
 ```yaml
 ---
@@ -144,7 +142,7 @@ database_server:
 
 #### Overview
 
-> Examples: https://docs.github.com/en/actions/examples
+> Examples: <https://docs.github.com/en/actions/examples>
 
 - A **workflow** (described as a YAML file) defines **jobs** that are triggered by some events (e.g., pushing to the remote repository).
 - A job is described by a sequence of **steps** and **runs on** dedicated GitHub **runner** (**windows**/**ubuntu**/**macOS**).
@@ -164,14 +162,14 @@ Follow up with `actions_demo` to see GitHub actions *in action*.
 - With DockerHub, it’s more secure to use a generated-token with only the necessary permissions instead of using the password.
 - Optimize workflow running time by [caching dependencies](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows).
 
-- You may want to use a tool like [act](https://github.com/nektos/act) to run your actions locally rather than having to commit/push every time you want to test out the changes you are making to your `.github/workflows/` files 
-- For complex workflows, develop and test your action in a separate branch and merge with main once finished. 
+- You may want to use a tool like [act](https://github.com/nektos/act) to run your actions locally rather than having to commit/push every time you want to test out the changes you are making to your `.github/workflows/` files
+- For complex workflows, develop and test your action in a separate branch and merge with main once finished.
 
 ### Jenkins
 
 ![Introducing Blue Ocean: a new user experience for Jenkins](https://www.jenkins.io/images/post-images/blueocean/pipeline-run.png)
 
-**Jenkins** is a dedicated build automation tool that is very popular. 
+**Jenkins** is a dedicated build automation tool that is very popular.
 
 - The service with a web UI can be installed natively on a server, or as a docker container.
 - Inside the server or the container, the tools needed for build has to be installed (e.g., docker, maven, npm, etc.)
@@ -179,7 +177,7 @@ Follow up with `actions_demo` to see GitHub actions *in action*.
 
 #### Overview
 
-> Examples: https://www.jenkins.io/doc/pipeline/examples/
+> Examples: <https://www.jenkins.io/doc/pipeline/examples/>
 
 - A `Jenkinsfile` (typically declarative but can also use groovy script) is used to create a Jenkins **pipeline** which consists of **stages** (e.g., build, test and deploy).
 - Each stage runs a sequence of **steps**, stages can be configured to run in **parallel** and a **post** stage can be configured to run after certain stages or steps are done (**always**, on **success**, or **failure**).
@@ -259,16 +257,16 @@ The core Terraform workflow consists of 3 stages:
 
 1. **Write:** represent infrastructure as [HCL declarative code](https://www.terraform.io/language). The syntax is built around two constructs: **arguments** and **blocks** (i.e., line-separated arguments and blocks).
    - HCL supports common programming concepts such as **variables**, **types** (string, numeric), **functions** (built-in), and **expressions**.
-   
+
    - An existing and supported infrastructure can be **import**ed into terraform to start managing it from code.
-   
+
 2. **Plan:** terraform creates an execution plan describing actions (e.g., create, modify, or destroy resources) that will be taken based on existing infrastructure **state** (stored in the **backend**) and current **workspace** configuration.
 
 3. **Apply:** interact with the service/platform-specific API through their **providers** (published on [**registry**](https://registry.terraform.io/)) to execute the plan.
 
-   - **Named values** are used for working with API keys or other configurations to allow re-usability and avoid hard-coding.
-
-   - **Modules** are used to group resources that are used together as a reusable package.  
+- **Named values** are used for working with API keys or other configurations to allow re-usability and avoid hard-coding.
+  
+- **Modules** are used to group resources that are used together as a reusable package.  
 
 #### Demo
 
@@ -284,7 +282,7 @@ Check `terraform_demos` directory to see Terraform in action.
 
 - Recommended directory structure and file naming for a minimal module:
 
-  ```
+  ```bash
   .
   ├── README.md     # module description
   ├── main.tf       # entry point (resource definition)
@@ -293,8 +291,6 @@ Check `terraform_demos` directory to see Terraform in action.
   ```
 
 - When using providers, make sure to pin their versions to ensure reproducibility.
-
-
 
 ## Tasks
 
@@ -315,13 +311,10 @@ Check `terraform_demos` directory to see Terraform in action.
 
    - If you have trouble with AWS, run the playbook against 3 VirtualBox VMs (provisioned with Vagrant or Terraform).
 
+## Resources
 
-
-## Recommended Tutorials
-
-- GitHub Actions: https://youtu.be/R8_veQiYBjI
-- GitLab CI/CD: https://youtu.be/qP8kir2GUgo?si=EaGDVwVf-UMdimfy
-- Jenkins: https://www.youtube.com/playlist?list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC
-- Ansible: https://www.youtube.com/watch?v=1id6ERvfozo
-- Terraform: https://www.youtube.com/watch?v=l5k1ai_GBDE
-
+- GitHub Actions: <https://youtu.be/R8_veQiYBjI>
+- GitLab CI/CD: <https://youtu.be/qP8kir2GUgo?si=EaGDVwVf-UMdimfy>
+- Jenkins: <https://www.youtube.com/playlist?list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC>
+- Ansible: <https://www.youtube.com/watch?v=1id6ERvfozo>
+- Terraform: <https://www.youtube.com/watch?v=l5k1ai_GBDE>
