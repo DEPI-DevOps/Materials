@@ -16,6 +16,7 @@ spec:
     volumeMounts:
       - name: example-volume
         mountPath: /tmp/example
+        readOnly: true
   initContainers:
     - name: init
       image: alpine:latest

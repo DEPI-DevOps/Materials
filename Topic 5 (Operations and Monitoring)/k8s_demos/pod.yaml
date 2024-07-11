@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  namespace: webapps
+  labels:
+    name: app
+spec:
+  containers:
+  - name: app
+    image: sh3b0/app_python:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080

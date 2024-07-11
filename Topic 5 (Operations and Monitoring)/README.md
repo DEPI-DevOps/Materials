@@ -4,15 +4,11 @@
 
 After a software product is released to the end-users, IT Operations teams carry on tasks that are mostly related to the management, support, and maintenance of the product. Monitoring solutions help them do such tasks.
 
-Monitoring allows IT organizations to identify specific issues of specific releases and to understand the impact on end-users.
-
-[TOC]
-
 ## Theory
 
-### ITOps
+### IT Operations
 
-ITOps responsibilities vary:
+Typical tasks include:
 
 - Server maintenance
 - Network monitoring
@@ -20,7 +16,6 @@ ITOps responsibilities vary:
 - Software patching
 - Application deployment
 - User account management
-
 - Security monitoring
 - Data backup and recovery
 - Compliance management
@@ -29,7 +24,7 @@ ITOps responsibilities vary:
 
 ### DevOps vs. Site Reliability Engineering
 
-- **DevOps:**  Focuses on the entire software development lifecycle, aiming to break down silos between development and operations teams. It emphasizes collaboration, automation, and continuous improvement to deliver software faster and more reliably.
+- **DevOps:** Focuses on the entire software development lifecycle, aiming to break down silos between development and operations teams. It emphasizes collaboration, automation, and continuous improvement to deliver software faster and more reliably.
 
 - **SRE:** Has a narrower focus on the reliability and scalability of systems in production.  They ensure applications perform well, meet user demands, and recover quickly from failures.
 
@@ -43,9 +38,7 @@ Multiple areas to monitor and setup notifications or alerts.
 - Uptime/Downtime
 - Application logs
 - Test coverage
-- Server health 
-
-
+- Server health
 
 ## Practice
 
@@ -112,8 +105,6 @@ Multiple areas to monitor and setup notifications or alerts.
 - A monitoring solution like Prometheus, but focused on application **logs** (collected by **[clients](https://grafana.com/docs/loki/latest/clients/)**) instead of general metrics.
 - Logs are stored as compressed objects and indexed for high efficiency, they can be queried using **LogQL**.
 
-
-
 ## Task
 
 - Write K8s manifests to deploy your application in Minikube.
@@ -124,8 +115,7 @@ Multiple areas to monitor and setup notifications or alerts.
 
 ## Resources
 
-- DevOps vs SRE: https://www.youtube.com/watch?v=OnK4IKgLl24
-- Kubernetes Crash Course: https://www.youtube.com/watch?v=s_o8dwzRlu4
-- Kubernetes Demos: https://www.youtube.com/playlist?list=PLy7NrYWoggjy3urR5g7BLJiNjLtQcVckT
-- Prometheus Monitoring: https://www.youtube.com/playlist?list=PLy7NrYWoggjxCF3av5JKwyG7FFF9eLeL4
-
+- DevOps vs SRE: <https://www.youtube.com/watch?v=OnK4IKgLl24>
+- Kubernetes Crash Course: <https://www.youtube.com/watch?v=s_o8dwzRlu4>
+- Kubernetes Demos: <https://www.youtube.com/playlist?list=PLy7NrYWoggjy3urR5g7BLJiNjLtQcVckT>
+- Prometheus Monitoring: <https://www.youtube.com/playlist?list=PLy7NrYWoggjxCF3av5JKwyG7FFF9eLeL4>
