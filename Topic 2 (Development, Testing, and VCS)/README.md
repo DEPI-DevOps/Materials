@@ -6,8 +6,6 @@ A DevOps engineer needs to be involved in the development process. While your ta
 
 This lab focuses on four essential skills for a DevOps engineer: Automation, Web Development, Testing, and Version Control.
 
-[TOC]
-
 ## Automation
 
 Being able to automate routine tasks is the most important skill for a DevOps engineer. Possessing automation skills gets you half-way there as a DevOps Engineer.

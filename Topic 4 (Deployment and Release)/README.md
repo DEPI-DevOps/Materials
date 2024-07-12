@@ -6,8 +6,6 @@ DevOps culture promotes continuous SDLC practices (i.e., continuous development,
 
 - Due to the field being relatively new and rapidly emerging, different sources may use the same *buzzword* with different intended meanings. Standardization efforts are ongoing.
 
-[TOC]
-
 ## Buzzwords (Theory)
 
 Whenever a software artifact becomes in a stable state, decisions to *deploy* and *release* the artifact may be taken. DevOps practitioners try to make this process as smooth as possible by means of automation, CI/CD pipelines, infrastructure as code, configuration management, and related practices.

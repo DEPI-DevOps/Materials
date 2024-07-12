@@ -4,8 +4,6 @@
 
 A DevOps engineer needs to be aware of the software building/packaging processes and tools used by different organizations to deliver their products.
 
-[TOC]
-
 ## Building Artifacts
 
 Incremental software development is about the building, packaging, deployment, releasing, and publishing of versioned **Software Artifacts**

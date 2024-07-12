@@ -21,7 +21,7 @@
 - Or use the provided compose file
 
     ```basic
-    docker-compose up
+    docker compose up
     ```
 
 - Follow the initialization steps at <http://JENKINS-HOME:8080>
