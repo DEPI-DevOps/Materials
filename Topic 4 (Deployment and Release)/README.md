@@ -70,7 +70,7 @@ YAML is a human-readable data serialization language.
 
 - It is commonly used for configuration files and in applications where data are being stored or transmitted.
 
-- YAML is used in many DevOps-related tools and technologies, including docker-compose, Ansible, Kubernetes manifests, Prometheus config, and Helm charts.
+- YAML is used in many DevOps-related tools and technologies, including docker compose, Ansible, Kubernetes manifests, Prometheus config, and Helm charts.
 
 Example config written in XML, JSON, and YAML
 

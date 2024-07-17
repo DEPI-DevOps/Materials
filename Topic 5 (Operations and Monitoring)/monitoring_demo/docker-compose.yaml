@@ -1,7 +1,5 @@
 # https://github.com/grafana/loki/blob/main/production/docker-compose.yaml
 ---
-version: "3"
-
 x-common-config: &common
   logging:
     driver: json-file

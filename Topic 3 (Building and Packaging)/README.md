@@ -11,10 +11,10 @@ Incremental software development is about the building, packaging, deployment, r
 - **For desktop development:** artifact can be the binary (executable) file or a bundle (e.g., JAR, ZIP) that is obtained from the source code.
 - **For mobile development:** artifact can be the installation package (e.g., APK, IPA)
 - **For web development:** artifact can be the source library files after being translated/minified/compressed/obfuscated/...
-    - Web applications with all their dependencies are typically provided as a Docker image that can be pulled, tested, and deployed quickly.
-
+  - Web applications with all their dependencies are typically provided as a Docker image that can be pulled, tested, and deployed quickly.
 
 ## Publishing Artifacts
+
 An artifact is typically published/released to the public for usage after its built. It's generally included in the releases section of a GitHub repository or published on a registry.
 
 **Popular build tools and registries for different technologies:**
@@ -48,7 +48,7 @@ An artifact is typically published/released to the public for usage after its bu
 Docker is the most popular containerization technology. Containerization addresses the problem of *"It works on my machine"* by packaging an **application** with its **environment** as an image.
 > Environment includes the OS setup with all the needed tools/packages installed with their specific versions.
 
-![](https://media.geeksforgeeks.org/wp-content/uploads/20221205115118/Architecture-of-Docker.png)
+![Docker Architecture](https://media.geeksforgeeks.org/wp-content/uploads/20221205115118/Architecture-of-Docker.png)
 
 **How it works & common commands:**
 
@@ -60,58 +60,66 @@ Docker is the most popular containerization technology. Containerization address
 
 ### Docker Installation
 
-**Recommended way:**
+- Recommended way:
 
-Follow the official installation steps at https://docs.docker.com/desktop/install/linux-install/ to install docker desktop for your distro with latest updates and supplementary tools.
+  Follow the official installation steps at <https://docs.docker.com/desktop/install/linux-install/> to install docker desktop for your distro with latest updates and supplementary tools.
 
-**SysAdmins way**
+- SysAdmins way
 
-```bash
-# Install docker, buildx, and docker-compose (alert: may not install latest versions)
-sudo apt install docker.io docker-compose docker-buildx
+  ```bash
+  # Install docker, buildx, and docker compose plugin (alert: may not install latest versions)
+  sudo apt install docker.io docker-buildx
 
-# Post installation steps: to run docker without sudo (you may need to restart/relogin for changes to take effect)
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
+  # Post installation steps: to run docker without sudo (you may need to restart/relogin for changes to take effect)
+  sudo groupadd docker
+  sudo usermod -aG docker $USER
+  newgrp docker
 
-# Test installation
-docker run hello-world
-```
+  # Test installation
+  docker run hello-world
+  ```
 
-**Hadolint (Dockerfile linter) setup**
+- Compose plugin ([ref](https://docs.docker.com/compose/install/linux/))
 
-```bash
-cd /tmp
-export RELEASE=$(curl -s https://api.github.com/repos/hadolint/hadolint/releases/latest | jq -r '.tag_name')
-wget "https://github.com/hadolint/hadolint/releases/download/$RELEASE/hadolint-Linux-x86_64"
-sudo mv hadolint* /usr/local/bin/hadolint
-sudo chmod +x /usr/local/bin/hadolint
+  ```bash
+  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+  mkdir -p $DOCKER_CONFIG/cli-plugins
+  curl -SL https://github.com/docker/compose/releases/download/v2.29.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+  ```
 
-# usage
-hadolint /path/to/Dockerfile
-```
+- Hadolint (Dockerfile linter) setup
+
+  ```bash
+  cd /tmp
+  export RELEASE=$(curl -s https://api.github.com/repos/hadolint/hadolint/releases/latest | jq -r '.tag_name')
+  wget "https://github.com/hadolint/hadolint/releases/download/$RELEASE/hadolint-Linux-x86_64"
+  sudo mv hadolint* /usr/local/bin/hadolint
+  sudo chmod +x /usr/local/bin/hadolint
+
+  # usage
+  hadolint /path/to/Dockerfile
+  ```
 
 ### Demo
 
 - Follow along with `docker_demos` to get familiar with docker commands while using it with popular technologies.
 - Create dockerfiles for sample `apps` in C++, Java, nodejs, Python, and Go.
 
-### Using docker-compose
+### Using docker compose
 
 - A `docker-compose.yaml` file can help you run multiple containers and connect them in one network.
 - This is generally used to run the complete application infrastructure (e.g., web servers, application server, and used databases) in one command.
-- The containers are declared as `services` that are instantiated from different images and deployed in a single network whenever the command `docker-compose up` is executed in the same directory
+- The containers are declared as `services` that are instantiated from different images and deployed in a single network whenever the command `docker compose up` is executed in the same directory
 - Services in the same network can communicate with each other using the container names given to them.
 
 ## Task
 
-- Follow along with https://play-with-docker.com/
+- Follow along with <https://play-with-docker.com/>
   - Run `docker run -dp 80:80 docker/getting-started:pwd` to get started
   - Log steps taken in a markdown file
 
 - Write a `Dockerfile` for your web apps.
-  - [Bonus] Use docker-compose to run your app with an nginx webserver.
+  - [Bonus] Use docker compose to run your app with an nginx webserver.
 
 - Build and push the image to DockerHub.
 - Add build and release instructions to the project README.
@@ -137,10 +145,8 @@ hadolint /path/to/Dockerfile
 
 - Use `npm ci` instead of `npm install` ([see why](https://docs.npmjs.com/cli/v8/commands/npm-ci)).
 
-  
-
 ## Resources
 
-- Docker Crash Course: https://www.youtube.com/watch?v=3c-iBn73dDE
-- Docker Networking: https://www.youtube.com/watch?v=OU6xOM0SE4o
-- Portainer: https://www.youtube.com/watch?v=ljDI5jykjE8
+- Docker Crash Course: <https://www.youtube.com/watch?v=3c-iBn73dDE>
+- Docker Networking: <https://www.youtube.com/watch?v=OU6xOM0SE4o>
+- Portainer: <https://www.youtube.com/watch?v=ljDI5jykjE8>

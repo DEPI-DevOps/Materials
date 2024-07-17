@@ -9,5 +9,5 @@ Flask, Gunicorn, SQLite, nginx, docker, docker-compose.
 ## How to run
 
 ```bash
-docker-compose build && docker-compose up
+docker compose build && docker compose up
 ```
