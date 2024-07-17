@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+      - mountPath: "/var/www/html"
+        name: mypd
+      resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: pvc-name
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: busybox-container
+      image: busybox
+      volumeMounts:
+        - name: config-dir
+          mountPath: /etc/config
+      resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+  volumes:
+    - name: config-dir
+      configMap:
+        name: bb-configmap
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: busybox-container
+    image: busybox
+    volumeMounts:
+    - name: secret-dir
+      mountPath: /etc/secret
+      readOnly: true
+    resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+  volumes:
+  - name: secret-dir
+    secret:
+      secretName: bb-secret

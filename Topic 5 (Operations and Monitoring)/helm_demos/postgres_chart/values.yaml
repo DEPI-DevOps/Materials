@@ -1,0 +1,10 @@
+# https://github.com/bitnami/charts/blob/16e6f01507f1aef5f5a575e4b550e0734a238045/bitnami/postgresql/values.yaml
+
+# Set default password for postgres admin user
+auth:
+  postgresPassword: postgres
+
+# Configure persistence
+primary:
+  persistence:
+    size: 1Gi

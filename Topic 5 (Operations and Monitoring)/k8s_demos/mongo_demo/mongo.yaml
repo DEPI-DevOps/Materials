@@ -30,6 +30,10 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
+        resources:
+          limits:
+            cpu: "2000m"
+            memory: "1Gi"
 ---
 apiVersion: v1
 kind: Service

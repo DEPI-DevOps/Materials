@@ -107,7 +107,7 @@ Multiple areas to monitor and setup notifications or alerts.
 
 ## Task
 
-- Write K8s manifests to deploy your application in Minikube.
+- Write K8s manifests to deploy your application in Minikube (deployment, service, namespace, ingress, roles).
 
 - Deploy monitoring and visualization stack with Prometheus and Grafana for your application in K8s.
 - Create a helm chart from the previously-created manifests.

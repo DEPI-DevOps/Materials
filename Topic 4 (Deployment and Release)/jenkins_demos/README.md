@@ -2,7 +2,7 @@
 
 - Jenkins native Installation
 
-    > Docs: https://www.jenkins.io/doc/book/installing/linux
+    > Docs: <https://www.jenkins.io/doc/book/installing/linux>
 
     ```bash
     # Installing jenkins and dependencies
@@ -24,7 +24,7 @@
     docker compose up
     ```
 
-- Follow the initialization steps at <http://JENKINS-HOME:8080>
+- Follow the initialization steps at `http://<JENKINS_HOME>:8080`
 
 ## Build prerequisites
 
@@ -62,7 +62,7 @@ If a plugin does not exist or is deprecated (e.g., no maintained Python plugin a
 - Exec into the container to install any needed build tools in your server
 
     ```bash
-    docker exec -it --user 0 /bin/bash
+    docker exec -it --user 0 jenkins /bin/bash
     ```
 
 - BASH script to install Python tools
@@ -116,4 +116,3 @@ If a plugin does not exist or is deprecated (e.g., no maintained Python plugin a
 
 - You may as well use [Docker HTTP API](https://docs.docker.com/engine/api/latest/) to interact with the socket instead of installing docker CLI.
 - Alternatively, the Docker Pipeline ([docker-workflow](https://docs.cloudbees.com/docs/cloudbees-ci/latest/pipelines/docker-workflow)) plugin provides a global `docker` variable that is accessible inside `Jenkinsfile` and can be used to interact with docker from the pipeline.
-

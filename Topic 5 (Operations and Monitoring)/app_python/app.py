@@ -51,5 +51,4 @@ def visitor_count():
 
 # When executing `python app.py` instead of `flask run`
 if __name__ == "__main__":
-    os.environ["FLASK_ENV"] = "development"
     app.run(debug=True, host='127.0.0.1', port=5000)

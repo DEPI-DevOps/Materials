@@ -5,7 +5,7 @@ metadata:
   labels: # (optional) arbitrary keys and corresponding values to label the deployment
     app: app  
 spec:
-  replicas: 3
+  replicas: 1
   selector: # the selector used by ReplicaSet to find the deployment pods, must match pod template labels
     matchLabels:
       app: app

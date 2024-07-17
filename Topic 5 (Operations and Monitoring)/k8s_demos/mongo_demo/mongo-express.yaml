@@ -45,6 +45,10 @@ spec:
             configMapKeyRef:
               name: mongodb-configmap
               key: database_url
+        resources:
+            limits:
+              cpu: "2000m"
+              memory: "1Gi"
 ---
 apiVersion: v1
 kind: Service

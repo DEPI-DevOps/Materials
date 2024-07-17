@@ -9,9 +9,9 @@
 Creates a Pod for the Python application in a namespace and apply resource limits
 
 ```bash
-kubectl apply -f namespace.yaml -f pod.yaml -f limitrange.yml
+kubectl apply -f namespace.yaml -f pod.yaml -f limitrange.yaml
 kubectl get all -n webapps
-kubectl describe limits/limitrange
+kubectl describe limits/limitrange -n webapps
 ```
 
 ## Deployment
