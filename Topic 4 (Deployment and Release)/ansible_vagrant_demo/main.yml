@@ -1,5 +1,4 @@
----
-- name: Install docker and docker Python SDK on all app nodes
+- name: Install docker on all app nodes
   hosts: app
   become: true
   roles:

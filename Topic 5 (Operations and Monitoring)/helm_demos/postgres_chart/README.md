@@ -7,7 +7,7 @@ Deploying [bitnami/postgres](https://github.com/bitnami/charts/tree/main/bitnami
 - Testing
 
   ```bash
-  helm install my-postgres oci://REGISTRY_NAME/REPOSITORY_NAME/postgresql
+  helm install my-release oci://registry-1.docker.io/bitnamicharts/postgresql
   ```
 
 - CI
@@ -32,5 +32,5 @@ kubectl descibe pvc/data-my-postgres-postgresql-0 -n postgres
 ## Removing the Chart
 
 ```bash
-helm uninstall my-postgres
+helm uninstall my-postgres -n postgres
 ```
