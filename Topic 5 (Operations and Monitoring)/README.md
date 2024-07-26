@@ -105,10 +105,19 @@ Multiple areas to monitor and setup notifications or alerts.
 - A monitoring solution like Prometheus, but focused on application **logs** (collected by **[clients](https://grafana.com/docs/loki/latest/clients/)**) instead of general metrics.
 - Logs are stored as compressed objects and indexed for high efficiency, they can be queried using **LogQL**.
 
+#### Best Practices
+
+- Official guides: [Grafana](https://grafana.com/docs/grafana/latest/best-practices/), [Loki](https://grafana.com/docs/loki/latest/best-practices/), [Prometheus](https://prometheus.io/docs/practices/).
+- Create descriptive logs that follow a common format.
+- Implement log rotation to save memory and disk space.
+- Create simple, easy to interpret dashboards with meaningful names.
+- When configuring alerts, try to have them triggered only when attention is needed.
+- Avoid unnecessary dashboard reloading to reduce network load.
+- Metric names for Prometheus should have a (single-word) application prefix relevant to the domain the metric belongs to.
+
 ## Task
 
 - Write K8s manifests to deploy your application in Minikube (deployment, service, namespace, ingress, roles).
-
 - Deploy monitoring and visualization stack with Prometheus and Grafana for your application in K8s.
 - Create a helm chart from the previously-created manifests.
 - [Extra] Install your chart against an EKS cluster provisioned from Terraform.

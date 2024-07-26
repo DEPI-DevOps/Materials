@@ -1,0 +1,57 @@
+---
+bases:
+  - "../bases/environments.yaml"
+  - "../bases/repos.yaml"
+---
+
+releases:
+{{- if .Environment.Values.autoscaler.enabled | default false }}
+- name: "cluster-autoscaler-{{ .Environment.Name }}"
+  namespace: "autoscaler"
+  chart: "stable/cluster-autoscaler"
+  labels:
+    chart: "cluster-autoscaler"
+    repo: "stable"
+    namespace: "kube-system"
+  version: 8.0.0
+  values:
+    - "./values/common/cluster-autoscaler-values.yaml.gotmpl"
+
+{{ end }}
+
+- name: "nginx-ingress-{{ .Environment.Name }}"
+  namespace: "nginx-ingress"
+  createNamespace: true
+  chart: "ingress-nginx/ingress-nginx"
+  labels:
+    chart: "ingress-nginx"
+    repo: "ingress-nginx"
+    component: "ingress"
+    namespace: "kube-ingress"
+  version: 3.11.0
+  values:
+    - "./values/common/nginx-ingress-values.yaml"
+    - "./values/{{ .Environment.Name }}/nginx-ingress-values.yaml"
+
+- name: "apache-{{ .Environment.Name }}"
+  namespace: "default"
+  chart: "bitnami/apache"
+  labels:
+    chart: "apache"
+    repo: "bitnami"
+    namespace: "default"
+  version: 8.0.3
+  values:
+    - "./values/{{ .Environment.Name }}/apache-values.yaml"
+    
+- name: "kube-dashboard-{{ .Environment.Name }}"
+  namespace: "default"
+  chart: "kubernetes-dashboard/kubernetes-dashboard"
+  labels:
+    chart: "kubernetes-dashboard"
+    repo: "kubernetes-dashboard"
+    namespace: "default"
+  version: 3.0.2
+  values:
+    - "./values/{{ .Environment.Name }}/dashboard-values.yaml"
+

@@ -12,13 +12,15 @@ x-common-config: &common
 services:
   app:
     <<: *common
-    image: sh3b0/app_python:latest # Or app_nodejs
+    image: sh3b0/app_python:latest
+    container_name: app
     ports:
       - "8080:8080"
-    
+
   loki:
     <<: *common
-    image: grafana/loki:2.5.0
+    image: grafana/loki:latest
+    container_name: loki
     # ports:
     #   - "3100:3100"
     volumes:
@@ -27,7 +29,8 @@ services:
 
   promtail:
     <<: *common
-    image: grafana/promtail:2.5.0
+    image: grafana/promtail:latest
+    container_name: promtail
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers  # Needed for container logs
       - ./config:/mnt/config
@@ -36,12 +39,16 @@ services:
   grafana:
     <<: *common
     image: grafana/grafana:latest
+    container_name: grafana
     ports:
       - "3000:3000"
+    volumes:
+      - ./provisioning:/etc/grafana/provisioning
 
   prometheus:
     <<: *common
     image: prom/prometheus:latest
+    container_name: prometheus
     ports:
       - "9090:9090"
     volumes:

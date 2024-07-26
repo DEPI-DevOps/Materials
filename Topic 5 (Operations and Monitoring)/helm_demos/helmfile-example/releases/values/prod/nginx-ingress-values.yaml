@@ -1,0 +1,6 @@
+controller:
+  replicaCount: 3
+  minAvailable: 1
+
+
+

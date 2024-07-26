@@ -1,0 +1,17 @@
+# https://grafana.com/docs/grafana/latest/datasources/prometheus/#provisioning-example
+# https://grafana.com/docs/grafana/latest/datasources/loki/#provisioning-examples
+---
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    uid: prometheus-datasource
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+
+  - name: Loki
+    uid: loki-datasource
+    type: loki
+    access: proxy
+    url: http://loki:3100

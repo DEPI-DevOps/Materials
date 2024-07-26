@@ -31,7 +31,7 @@
     {
       "datasource": {
         "type": "loki",
-        "uid": "Hy4-0X3nk"
+        "uid": "loki-datasource"
       },
       "description": "",
       "gridPos": {
@@ -55,12 +55,10 @@
       "targets": [
         {
           "datasource": {
-            "type": "loki",
-            "uid": "hKdOFXq7k"
+            "type": "loki"
           },
-          "editorMode": "code",
-          "expr": "{tag=\"monitoring_app_1\"}",
-          "legendFormat": "",
+          "editorMode": "builder",
+          "expr": "{tag=\"app\"} |= ``",
           "queryType": "range",
           "refId": "A"
         }
@@ -69,10 +67,7 @@
       "type": "logs"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "n2h_Auqnz"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -100,7 +95,8 @@
       "options": {
         "legend": {
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "pieType": "pie",
         "reduceOptions": {
@@ -119,7 +115,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "n2h_Auqnz"
+            "uid": "prometheus-datasource"
           },
           "editorMode": "code",
           "expr": "sum by(status) (flask_http_request_total)",
@@ -132,8 +128,7 @@
       "type": "piechart"
     }
   ],
-  "schemaVersion": 36,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
@@ -146,6 +141,6 @@
   "timezone": "",
   "title": "Application",
   "uid": "BgMgpXqnz",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }

@@ -1,0 +1,15 @@
+replicaCount: 3
+
+resources: 
+  limits:
+    cpu: 400m
+    memory: 256Mi
+  requests:
+    cpu: 200m
+    memory: 128Mi
+
+ingress:
+  enabled: true
+  hostname: apache-prod.kubesandclouds.com
+  annotations: 
+    kubernetes.io/ingress.class: nginx

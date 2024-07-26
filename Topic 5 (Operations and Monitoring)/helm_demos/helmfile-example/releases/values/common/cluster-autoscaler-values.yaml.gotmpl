@@ -1,0 +1,11 @@
+rbac:
+  create: true
+cloudProvider: aws
+awsRegion: eu-west-1
+replicaCount: 1
+extraArgs:
+  v: 4
+  balance-similar-node-groups: true
+autoDiscovery:
+  clusterName: "{{ .Environment.Name }}-cluster"
+  enabled: true

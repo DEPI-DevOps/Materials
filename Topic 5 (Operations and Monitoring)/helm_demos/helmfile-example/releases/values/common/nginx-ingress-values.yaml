@@ -1,0 +1,17 @@
+rbac:
+  create: true
+
+podSecurityPolicy:
+  enabled: true
+
+controller:
+  ingressClass: nginx
+  kind: Deployment
+  stats:
+    enabled: true
+  metrics:
+    enabled: true
+  service:
+    externalTrafficPolicy: Local
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: "alb"
