@@ -33,6 +33,7 @@ services:
     container_name: promtail
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers  # Needed for container logs
+      - /var/log:/var/log
       - ./config:/mnt/config
     command: -config.file=/mnt/config/promtail-config.yaml
 
