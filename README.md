@@ -22,7 +22,7 @@
 ## Plan (C1) - tentative
 
 ```bash
-Total 25 Sessions
+Total 26 Sessions
 =================
 
 8 Offline Practice
@@ -36,7 +36,7 @@ Total 25 Sessions
 7 (31/8). Monitoring (Prometheus, Loki, and Grafana)
 8 (14/9). Final presentations
 
-17 Online Theory
+18 Online Theory
 =================
 01 (19/4). Linux
 02 (26/4). Networking
@@ -51,18 +51,19 @@ Total 25 Sessions
 08 (12/7). CI (Jenkins and GitHub Actions)
 09 (19/7). CD (Ansible) & AWS Overview
 ------------------------ Offline 4
-10 (26/7). IaC (Terraform)
-11 (02/8). K8s essentials, Minikube
+10 (26/7). CI/CD Recap
+11 (02/8). IaC (Terraform)
 ------------------------ Offline 5
-12 (09/8). More on K8s
-13 (16/8). EKS, Helm, and Helmfile
+12 (09/8). K8s essentials, Minikube
+13 (16/8). More on K8s
 ------------------------ Offline 6
-14 (30/8). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
+14 (23/8). K8s on AWS & Helm
+15 (30/8). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
 ------------------------ Offline 7
-15 (06/9). DevSecOps
-16 (13/9). Interview Preparation, Recap, QA
+16 (06/9). DevSecOps
+17 (13/9). Interview Preparation, Recap, QA
 ----------------------- Offline 8
-17 (20/9). Final assessment
+18 (20/9). Final assessment
 ```
 
 ## Plan (C2) - tentative
