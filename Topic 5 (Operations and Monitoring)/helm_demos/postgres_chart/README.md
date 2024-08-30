@@ -26,7 +26,7 @@ Deploying [bitnami/postgres](https://github.com/bitnami/charts/tree/main/bitnami
 ```bash
 kubectl get pv -n postgres
 kubectl get pvc -n postgres
-kubectl descibe pvc/data-my-postgres-postgresql-0 -n postgres
+kubectl describe pvc/data-my-postgres-postgresql-0 -n postgres
 ```
 
 ## Removing the Chart

@@ -52,8 +52,8 @@ kubectl describe limits/limitrange -n webapps
 - To remove created objects
 
    ```bash
-   kubectl delete service/app-deployment
-   kubectl delete deployment.apps/app-service
+   kubectl delete service/app-service
+   kubectl delete deployment.apps/app-deployment
    ```
 
 ## Init Container
