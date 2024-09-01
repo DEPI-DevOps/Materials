@@ -1,0 +1,72 @@
+apiVersion: 1
+groups:
+  - orgId: 1
+    name: System
+    folder: System
+    interval: 10s
+    rules:
+      - uid: TargetDown
+        title: TargetDown
+        condition: B
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: prometheus-datasource
+            model:
+              datasource:
+                  type: prometheus
+                  uid: prometheus-datasource
+              disableTextWrap: false
+              editorMode: builder
+              expr: up{job="app"}
+              fullMetaSearch: false
+              hide: false
+              includeNullMetadata: true
+              instant: true
+              intervalMs: 1000
+              legendFormat: __auto
+              maxDataPoints: 43200
+              range: false
+              refId: A
+              useBackend: false
+          - refId: B
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: __expr__
+            model:
+              conditions:
+                  - evaluator:
+                      params:
+                          - 1
+                          - 0
+                      type: lt
+                    operator:
+                      type: and
+                    query:
+                      params: []
+                    reducer:
+                      params: []
+                      type: avg
+                    type: query
+              datasource:
+                  name: Expression
+                  type: __expr__
+                  uid: __expr__
+              expression: A
+              hide: false
+              intervalMs: 1000
+              maxDataPoints: 43200
+              refId: B
+              type: threshold
+        noDataState: NoData
+        execErrState: OK
+        for: 10s
+        annotations:
+          summary: Application is down
+        labels: {}
+        isPaused: false
+        notification_settings:
+          receiver: telegram
