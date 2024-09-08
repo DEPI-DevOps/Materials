@@ -22,10 +22,10 @@
 ## Plan (C1) - tentative
 
 ```bash
-Total 26 Sessions
+Total 28 Sessions
 =================
 
-8 Offline Practice
+9 Offline Practice
 ===================
 1 (11/5). Linux and Networking
 2 (22/6). Development, Testing, and VCS (Git)
@@ -34,9 +34,10 @@ Total 26 Sessions
 5 (03/8). CD (Ansible) & IaC (Terraform with aws/docker/github/vagrant)
 6 (17/8). Container Orchestration (K8s, Minikube, EKS), Helm, and Helmfile
 7 (31/8). Monitoring (Prometheus, Loki, and Grafana)
-8 (14/9). Final presentations
+8 (14/9). End-to-end DevOps project
+9 (28/9). Final presentations
 
-18 Online Theory
+19 Online Theory
 =================
 01 (19/4). Linux
 02 (26/4). Networking
@@ -61,18 +62,20 @@ Total 26 Sessions
 15 (30/8). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
 ------------------------ Offline 7
 16 (06/9). DevSecOps
-17 (13/9). Interview Preparation, Recap, QA
+17 (13/9). DevOps Engineer hiring process
 ----------------------- Offline 8
-18 (20/9). Final assessment
+18 (20/9). TBA
+19 (27/9). TBA
+----------------------- Offline 9
 ```
 
 ## Plan (C2) - tentative
 
 ```bash
-Total 24 Sessions
+Total 26 Sessions
 =================
 
-8 Offline Practice
+9 Offline Practice
 ===================
 1 (27/4). Linux and Networking
 2 (18/5). Development, Testing, and VCS (Git)
@@ -81,9 +84,10 @@ Total 24 Sessions
 5 (29/6). CD (Ansible) & IaC (Terraform with aws/docker/github/vagrant)
 6 (13/7). Container Orchestration (K8s, Minikube, EKS), Helm, and Helmfile
 7 (27/7). Monitoring (Prometheus, Loki, and Grafana)
-8 (10/8). Final presentations
+8 (10/8). Mock final presentations
+9 (21/9). Official final presentations
 
-16 Online Theory
+17 Online Theory
 =================
 01 (19/4). Linux
 02 (26/4). Networking
@@ -106,7 +110,9 @@ Total 24 Sessions
 13 (26/7). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
 ------------------------ Offline 7
 14 (02/8). DevSecOps
-15 (09/8). Interview Preparation, Recap, QA
+15 (09/8). DevOps Engineer hiring process
 ----------------------- Offline 8
-16 (16/8). Final assessment
+16 (16/8). Late presentations
+17 (20/9). End-to-End DevOps Project
+----------------------- Offline 9
 ```
