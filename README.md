@@ -35,7 +35,7 @@ Total 28 Sessions
 6 (17/8). Container Orchestration (K8s, Minikube, EKS), Helm, and Helmfile
 7 (31/8). Monitoring (Prometheus, Loki, and Grafana)
 8 (14/9). End-to-end DevOps project
-9 (28/9). Final presentations
+9 (21/9). Final presentations
 
 19 Online Theory
 =================
@@ -62,9 +62,9 @@ Total 28 Sessions
 15 (30/8). Monitoring, Visualization, and Alerting (Prometheus, Loki, Grafana)
 ------------------------ Offline 7
 16 (06/9). DevSecOps
-17 (13/9). DevOps Engineer hiring process
+17 (13/9). K8s Review
 ----------------------- Offline 8
-18 (20/9). TBA
+18 (20/9). DevOps Engineer hiring process
 19 (27/9). TBA
 ----------------------- Offline 9
 ```
