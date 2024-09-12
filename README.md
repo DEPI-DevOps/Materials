@@ -65,7 +65,6 @@ Total 28 Sessions
 17 (13/9). K8s Review
 ----------------------- Offline 8
 18 (20/9). DevOps Engineer hiring process
-19 (27/9). TBA
 ----------------------- Offline 9
 ```
 
