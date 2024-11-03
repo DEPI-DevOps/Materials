@@ -21,6 +21,3 @@
 
 ## Track Plan - Batch 1 (Apr 2024 - Sep 2024) 
 https://docs.google.com/spreadsheets/d/1MkrqcX_s86kn70i4Aix69D8ub8N8nM7XHLdYmW2crjc/edit?usp=sharing
-
-## Track Plan - Batch 2 (Oct 2024 - Mar 2025)
-
